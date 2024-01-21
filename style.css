@@ -1,0 +1,402 @@
+body{
+    background-color: white;
+    font-family: poppins;
+    color: black;
+    display: grid;
+}
+header{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    align-items: center;
+}
+nav{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 50px;
+}
+.logo{
+    width: 100PX
+}
+button{
+    height: 50px;
+    width: 150px;
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+    border: solid 2px purple;
+    border-radius: 50px;
+}
+button:hover{
+    cursor: pointer;
+    background-color: white;
+    color: purple;
+    border: solid 2px purple;
+    font-weight: bold;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+button:active{
+    box-shadow: none;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    position: relative;
+    font-size: 20px;
+}
+nav a:before{
+    content:"";
+    position: absolute;
+    bottom: -9px;
+    height: 3px;
+    width: 0px;
+    background-color: purple;
+    border-radius: 50px;
+    transition: width 0.3s ease;
+}
+nav a:hover:before{
+    width: 90%;
+}
+nav a:hover{
+    color: purple;
+    transition: 0.3s;
+}
+article{
+    display: grid;
+    justify-items: center;
+    row-gap: 100px;
+    margin-top: 100px;
+}
+.introduction{
+display: grid;
+grid-template-columns: 1fr 1fr;
+justify-items: center;
+align-items: center;
+
+}
+.self-intro{
+display: grid;
+padding-left: 200px;
+float: right;
+}
+.thumbnail{
+    float: left;
+}
+.profile-img{
+    width: 400px;
+    border-radius: 50%;
+    float: left;
+}
+.introduction h1{
+    font-size: 50px;
+}
+.our-features{
+    display: grid;
+    justify-items: center;
+}
+.features{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.our-features h1{
+    font-size: 30px;
+}
+.items{
+    border: none;
+    background-color: rgb(229, 230, 231);
+    border-radius: 10px;
+    padding: 10px;
+}
+.items:hover{
+    border: solid 1px black;
+    transition: background-color 0.3s;
+}
+.items a{
+    text-decoration: none;
+    color: black;
+}
+.items a:hover{
+    color: purple;
+    font-size: 110%;
+    transition: 0.3s;
+}
+.items h6{
+    font-weight: bold;
+    font-size: 15px;
+}
+.items p{
+    font-size: 13px;
+}
+.features .items i{
+    background-color: purple;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+}
+.project-pricing-plans{
+    display: grid;
+    row-gap: 30px;
+}
+.description{
+    text-align: center;
+}
+.description h1{
+    font-size: 30px;
+}
+.project{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 30px;
+}
+.project .items button{
+    background-color: white;
+    color: purple;
+    border: solid 1px;
+    width: 200px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.project .items button:hover{
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    border: none;
+    transition: 0.3s;
+}
+.project .items{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    padding-bottom: 20px;
+    background-color: rgb(229, 230, 231);
+}
+.option{
+    height: 350px;
+}
+hr{
+    border: none;
+    border-top: 3px dashed black;
+    width: 200px;
+}
+.about-section{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 30px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+.contact{
+    display: grid;
+    row-gap: 10px;
+}
+.contact img{
+    width: 100px;
+}
+.contact p{
+    font-size: 15px;
+    margin: 0;
+    width: 70%;
+}
+.contact i{
+    font-size: 30px;
+    margin-right: 10px;
+    border: solid;
+    border-radius: 50%;
+    padding: 5px;
+    color: purple;
+    margin-bottom: 10px;
+}
+.contact i:hover{
+    background-color: purple;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.information{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+}
+.information .item a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    margin: 10px 0px;
+}
+.information .item a:hover{
+    color: purple;
+    text-decoration: underline;
+}
+footer{
+    padding-top: 90px;
+}
+footer p{
+    text-align: center;
+    font-size: 15px;
+}
+
+@media screen and (max-width:1200px) {
+    .profile-img{
+        width: 370px;
+    }
+    .self-intro, .about-section{
+        padding: 90px;
+    }
+}
+@media screen and (max-width:1100px){
+    .profile-img{
+        width: 350px;
+    }
+    .self-intro h1{
+        font-size: 25px;
+    }
+    .self-intro,.about-section{
+        padding: 70px;
+    }
+    button{
+        height: 45px;
+        width: 140px;
+    }
+    nav a{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:980px){
+    button{
+        height: 40px;
+        width: 120px;
+    }
+    .logo{
+        width: 90px;
+    }
+    .self-intro{
+        padding: 50px;
+    }
+    .about-section{
+        padding: 50px;
+    }
+    .introduction{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .project .items{
+        width: 200px;
+    }
+    .our-features{
+        padding-top: 150px;
+    }
+    .features{
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        row-gap: 10px;
+        padding: 0px 50px;
+    }
+}
+@media screen and (max-width: 760px) {
+    .self-intro{
+        justify-items: center;
+    }
+    .self-intro p{
+        font-size: 15px;
+    }
+    .project{
+        column-gap: 10px;
+    }
+    nav{
+        column-gap: 20px;
+    }
+}
+@media screen and (max-width: 700px){
+    .project{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        row-gap: 10px;
+    }
+    .information{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 650px){
+    header{
+        display: grid;
+        grid-template-columns: 1fr 2fr; 
+        row-gap: 10px; 
+    }
+    .features{
+        padding: 0px 20px;
+    }
+}
+@media screen and (max-width: 460px){
+    header{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .profile-img{
+        width: 250px;
+    }
+    .project{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .project .items{
+        width: 80%
+    }
+    .about-section{
+        padding: 0px 20px;
+    }
+}
+@media screen and (max-width: 460px){
+    nav a:before{
+        bottom: -3px;
+        height: 2px;
+    }
+    nav{
+        margin-bottom: 10px;
+    }
+    .features{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0%;
+    }
+    .our-features h1{
+        font-size: 20px;
+    }
+    .description h1{
+        font-size: 20px;
+    }
+    .our-features{
+        padding: 20px;
+    }
+    .contact{
+        display: block;
+        
+    }
+    .contact .item{
+        margin-bottom: 10px;
+    }
+    .contact img{
+        width: 70px;
+    }
+    .contact p{
+        font-size: 10px;
+    }
+    .contact i{
+        font-size: 15px;
+        border: solid 1px;
+    }
+    .information a, h4{
+        font-size: 10px;
+    }
+    footer{
+        padding-top: 10px;
+    }
+    footer p{
+        font-size: 10px;
+    }
+}
